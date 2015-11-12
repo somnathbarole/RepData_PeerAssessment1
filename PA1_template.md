@@ -157,7 +157,7 @@ The total number of missing values found in data are 2304
  
 There are different ways to deal with missing data. Missing values can be replaced with mean, median or mode of the dataset. Also there are various data imputations strategies developed based on statistical methods.  
 
-Here we will replace NA values in the dataset with mean steps for that perticular interval.  
+In this example mean and median are very close. Here we will replace NA values in the dataset with mean steps for that perticular interval.  
 
 **3. Create a new dataset that is equal to the original dataset but with the missing data filled in.**
 
@@ -258,11 +258,11 @@ Cosidering NAs in the dataset **mean** is **10766.19** and **median** is **10765
 After replacing NAs in the dataset with mean step values **mean** is **10766.19** and **mean** is **10766.19**  
 
 **4.3 What is the impact of imputing missing data on the estimates of the total daily number of steps?**  
-After replacing the NAs in original data set we can see that mean is same for original dataset and new dtaset but median is slightly shifted in new dataset.  
+After replacing the NAs in original data set, we can see that mean is same for original dataset and new dataset but median is slightly shifted in new dataset.  
 
 Also mean and median has same values for new dataset.  
 
-If we compare the histograms for original datset and new datsset, we see that peak value is been incresed in new dataset.
+If we compare the histograms for original datset and new dataset, we see that peak value is been incresed in new dataset.
 
 ### Are there differences in activity patterns between weekdays and weekends?  
 
