@@ -155,7 +155,9 @@ The total number of missing values found in data are 2304
 
 **2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.**
  
-NA values in the data set are replaced with mean steps for that interval.  
+There are different ways to deal with missing data. Missing values can be replaced with mean, median or mode of the dataset. Also there are various data imputations strategies developed based on statistical methods.  
+
+Here we will replace NA values in the dataset with mean steps for that perticular interval.  
 
 **3. Create a new dataset that is equal to the original dataset but with the missing data filled in.**
 
