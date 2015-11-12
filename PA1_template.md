@@ -322,8 +322,3 @@ ggplot(FiveMinnewdata, aes(x=interval, y=steps)) + geom_line(color="red") +
 Yes there are differeces in the activity patterns for the weekdays & weekends. From the plots we can see that for weekdays there is single high peak that depicts highest steps in that paerticular time interval and other peaks has comparatively low values.  
 
 However for the weekdyas we see that magnitue of peak is reduced and other peaks in the plot have comparable values with respect to each other; roughly looks somehow uniformity in the number of steps.
-
-
-```r
-output = "./" 
-```
