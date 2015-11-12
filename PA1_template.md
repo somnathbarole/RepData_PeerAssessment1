@@ -3,7 +3,7 @@ title: "Peer Assessment-1, Reproducible Research"
 author: "Somnath S. Barole"
 date: "November-12, 2015"
 output: html_document
-keep_md: true
+keep_md: yes
 ---
 
 This R Markdown document contains the report created for Peer Assessment-1, Reproducible Research. 
