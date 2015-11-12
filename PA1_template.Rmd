@@ -168,13 +168,13 @@ NewStepmedian
 
 ```
 
-After replacing NA values in the dataset he new mean 10766.19 is and new median is 10766.19    
+After replacing NA values in the dataset the new mean is 10766.19 and new median is 10766.19    
 
 Yes these values are slightly differ from previous calculted mean and median values.    
 
 Cosidering NAs in the dataset **mean** is **10766.19** and **median** is **10765**    
 
-After replacing NAs in the dataset with mean step values **mean** is **10766.19** and **mean** is **10766.19**  
+After replacing NAs in the dataset with mean step values **mean** is **10766.19** and **median** is **10766.19**  
 
 **4.3 What is the impact of imputing missing data on the estimates of the total daily number of steps?**  
 After replacing the NAs in original data set, we can see that mean is same for original dataset and new dataset but median is slightly shifted in new dataset.  
