@@ -6,7 +6,7 @@ output: html_document
 keep_md: yes
 ---
 
-This R Markdown document contains the report created for Peer Assessment-1, Reproducible Research. 
+This R Markdown document is the report created for assignment Peer Assessment-1, Reproducible Research. 
 The flow of the document follows the sequence in a way questions are asked in the assignment.
 
 ### Loading and preprocessing the data:
@@ -42,7 +42,7 @@ names(data)
 For this part of the assignment it is mentioned that we can ignore the missing values in the dataset.
 
 **1. Calculate the total number of steps taken per day**  
-We can claculate total number of steps taken per day using aggregate() function taking sum over the steps
+We can calculate total number of steps taken per day using aggregate() function taking sum over the steps
 for each of the date.
 
 
@@ -77,7 +77,7 @@ axis(2, pos=1)
   
 **3. Calculate and report the mean and median of the total number of steps taken per day**  
 
-Mean and median of the total number of steps taken per day can be claculated using functionsmean() and median().
+Mean and median of the total number of steps taken per day can be calculated using functions mean() and median().
 
 
 ```r
@@ -104,7 +104,7 @@ The calculated value of **mean** is **10766.19** and **median** is **10765**
 ### What is the average daily activity pattern?
 **1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)**  
 
-Below is the time series pof lot average number of steps taken with respect to time interval.
+Below is the time series plot of average number of steps taken with respect to time interval.
 
 
 
@@ -139,7 +139,7 @@ FiveMinIntData[index1, ]
 
 **1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)**     
 
-The total number of missing values can be caclcaulted using sum(is.na())
+The total number of missing values can be calculated using sum(is.na())
 
 
 ```r
@@ -195,7 +195,7 @@ head(newdata)
 ## 6 2.0943396 2012-10-01       25
 ```
 
-Also if we calculate sum of NA values in newdata, we will get zero sum. This ensures all the NA values are replaced with mean steps value.
+Also if we calculate sum of NA values in newdata, we will get zero sum. This ensures all the NA values are replaced with mean steps values.
 
 
 ```r
@@ -251,16 +251,16 @@ NewStepmedian
 
 After replacing NA values in the dataset the new mean is 10766.19 and new median is 10766.19    
 
-Yes these values are slightly differ from previous calculted mean and median values.    
+Yes these values are slightly differ from previously calculted mean and median values.    
 
 Cosidering NAs in the dataset **mean** is **10766.19** and **median** is **10765**    
 
-After replacing NAs in the dataset with mean step values **mean** is **10766.19** and **median** is **10766.19**  
+After replacing NAs in the dataset with mean step values, **mean** is **10766.19** and **median** is **10766.19**  
 
 **4.3 What is the impact of imputing missing data on the estimates of the total daily number of steps?**  
 After replacing the NAs in original data set, we can see that mean is same for original dataset and new dataset but median is slightly shifted in new dataset.  
 
-Also mean and median has same values for new dataset.  
+Also mean and median is same for new dataset.  
 
 If we compare the histograms for original datset and new dataset, we see that peak value is been incresed in new dataset.
 
@@ -321,6 +321,6 @@ ggplot(FiveMinnewdata, aes(x=interval, y=steps)) + geom_line(color="red") +
 
 ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
-Yes there are differeces in the activity patterns for the weekdays & weekends. From the plots we can see that for weekdays there is single high peak that depicts highest steps in that paerticular time interval and other peaks has comparatively low values.  
+Yes there are differeces in the activity patterns for the weekdays & weekends. From the plots we can see that for weekdays there is single high peak that depicts highest steps in that perticular time interval and other peaks has comparatively low values.  
 
-However for the weekdyas we see that magnitue of peak is reduced and other peaks in the plot have comparable values with respect to each other; roughly looks somehow uniformity in the number of steps.
+However for the weekdyas we see that magnitue of peak is reduced and allmost all the peaks in the plot have comparable values with respect to each other; roughly seems to have somewhat uniformity in the number of steps.

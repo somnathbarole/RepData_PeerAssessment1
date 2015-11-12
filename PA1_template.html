@@ -201,7 +201,7 @@ hr {
 </head>
 
 <body>
-<p>This R Markdown document contains the report created for Peer Assessment-1, Reproducible Research. 
+<p>This R Markdown document is the report created for assignment Peer Assessment-1, Reproducible Research. 
 The flow of the document follows the sequence in a way questions are asked in the assignment.</p>
 
 <h3>Loading and preprocessing the data:</h3>
@@ -233,7 +233,7 @@ head(data)
 <p>For this part of the assignment it is mentioned that we can ignore the missing values in the dataset.</p>
 
 <p><strong>1. Calculate the total number of steps taken per day</strong><br/>
-We can claculate total number of steps taken per day using aggregate() function taking sum over the steps
+We can calculate total number of steps taken per day using aggregate() function taking sum over the steps
 for each of the date.</p>
 
 <pre><code class="r">StepsDay &lt;- aggregate(steps ~ date, data, sum, na.rm=TRUE)
@@ -264,7 +264,7 @@ axis(2, pos=1)
 
 <p><strong>3. Calculate and report the mean and median of the total number of steps taken per day</strong>  </p>
 
-<p>Mean and median of the total number of steps taken per day can be claculated using functionsmean() and median().</p>
+<p>Mean and median of the total number of steps taken per day can be calculated using functions mean() and median().</p>
 
 <pre><code class="r">Stepmean &lt;- mean(StepsDay$steps, na.rm=TRUE)
 Stepmean
@@ -286,7 +286,7 @@ Stepmedian
 
 <p><strong>1. Make a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</strong>  </p>
 
-<p>Below is the time series pof lot average number of steps taken with respect to time interval.</p>
+<p>Below is the time series plot of average number of steps taken with respect to time interval.</p>
 
 <pre><code class="r">FiveMinIntData &lt;- aggregate(steps ~ interval, data, mean, na.rm=TRUE)
 
@@ -315,7 +315,7 @@ FiveMinIntData[index1, ]
 
 <p><strong>1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)</strong>     </p>
 
-<p>The total number of missing values can be caclcaulted using sum(is.na())</p>
+<p>The total number of missing values can be calculated using sum(is.na())</p>
 
 <pre><code class="r">NAcount &lt;- sum(is.na(data$steps))
 NAcount
@@ -365,7 +365,7 @@ head(newdata)
 ## 6 2.0943396 2012-10-01       25
 </code></pre>
 
-<p>Also if we calculate sum of NA values in newdata, we will get zero sum. This ensures all the NA values are replaced with mean steps value.</p>
+<p>Also if we calculate sum of NA values in newdata, we will get zero sum. This ensures all the NA values are replaced with mean steps values.</p>
 
 <pre><code class="r">NewNAcount &lt;- sum(is.na(newdata$steps))
 NewNAcount
@@ -411,16 +411,16 @@ NewStepmedian
 
 <p>After replacing NA values in the dataset the new mean is 10766.19 and new median is 10766.19    </p>
 
-<p>Yes these values are slightly differ from previous calculted mean and median values.    </p>
+<p>Yes these values are slightly differ from previously calculted mean and median values.    </p>
 
 <p>Cosidering NAs in the dataset <strong>mean</strong> is <strong>10766.19</strong> and <strong>median</strong> is <strong>10765</strong>    </p>
 
-<p>After replacing NAs in the dataset with mean step values <strong>mean</strong> is <strong>10766.19</strong> and <strong>median</strong> is <strong>10766.19</strong>  </p>
+<p>After replacing NAs in the dataset with mean step values, <strong>mean</strong> is <strong>10766.19</strong> and <strong>median</strong> is <strong>10766.19</strong>  </p>
 
 <p><strong>4.3 What is the impact of imputing missing data on the estimates of the total daily number of steps?</strong><br/>
 After replacing the NAs in original data set, we can see that mean is same for original dataset and new dataset but median is slightly shifted in new dataset.  </p>
 
-<p>Also mean and median has same values for new dataset.  </p>
+<p>Also mean and median is same for new dataset.  </p>
 
 <p>If we compare the histograms for original datset and new dataset, we see that peak value is been incresed in new dataset.</p>
 
@@ -476,9 +476,9 @@ ggplot(FiveMinnewdata, aes(x=interval, y=steps)) + geom_line(color=&quot;red&quo
 
 <p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-13"/> </p>
 
-<p>Yes there are differeces in the activity patterns for the weekdays &amp; weekends. From the plots we can see that for weekdays there is single high peak that depicts highest steps in that paerticular time interval and other peaks has comparatively low values.  </p>
+<p>Yes there are differeces in the activity patterns for the weekdays &amp; weekends. From the plots we can see that for weekdays there is single high peak that depicts highest steps in that perticular time interval and other peaks has comparatively low values.  </p>
 
-<p>However for the weekdyas we see that magnitue of peak is reduced and other peaks in the plot have comparable values with respect to each other; roughly looks somehow uniformity in the number of steps.</p>
+<p>However for the weekdyas we see that magnitue of peak is reduced and allmost all the peaks in the plot have comparable values with respect to each other; roughly seems to have somewhat uniformity in the number of steps.</p>
 
 </body>
 
